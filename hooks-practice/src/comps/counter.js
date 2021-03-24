@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export default function Counter() {
   const [count, setCount] = useState(10);
   const [count2, setCount2] = useState(20);
+
   return (
     <>
       <h2>A simple counter</h2>
