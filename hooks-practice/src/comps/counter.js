@@ -6,7 +6,7 @@ export default function Counter() {
 
   return (
     <>
-      <h2>A simple counter</h2>
+      <h2>A simple counter component that utilizes useState</h2>
       <button
         onClick={() => {
           setCount(count + 1);

@@ -1,9 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
+
+import React, { useEffect } from "react";
+
 import Counter from "./comps/counter";
 import Form from "./comps/form";
 import Fetch from "./comps/fetch";
-import React, { useEffect } from "react";
+import UseRefEx from "./comps/useRefEx";
 
 function App() {
   // useEffect(() => {
@@ -21,6 +23,7 @@ function App() {
       <Counter />
       <Form />
       <Fetch />
+      <UseRefEx />
     </div>
   );
 }
