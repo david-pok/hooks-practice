@@ -3,13 +3,17 @@ import React, { useState, useEffect } from "react";
 export default function Fetch() {
   const [counter, setCounter] = useState(0);
   const [jsonCount, setJsonCount] = useState(1);
-  let asdf = 0;
+
+  //we use our custom hook that grabs text data
   const { info, loading } = useFetchText(
     `http://numbersapi.com/${counter}/trivia`
   );
+
+  //our custom hook for grabbing json data
   const { jsonData, jLoading } = useFetchJson(
     `https://jsonplaceholder.typicode.com/todos/${jsonCount}`
   );
+
   return (
     <>
       <h2>
@@ -35,11 +39,6 @@ export default function Fetch() {
             <div>Completed? {jsonData.completed ? "True" : "False"}</div>
           </>
         )}
-
-        {/* <div>
-        todo #{jsonCount}: {jsonData.title}
-      </div>
-      <div>Completed? {jsonData.completed ? "True" : "False"}</div> */}
       </div>
 
       <button onClick={() => setJsonCount(jsonCount + 1)}>Next ToDo</button>
@@ -47,6 +46,8 @@ export default function Fetch() {
   );
 }
 
+//this custom fetch hook will hit an api and take only
+//its text data and pass it on as state
 const useFetchText = (url) => {
   const [state, setState] = useState({ info: null, loading: true });
 
@@ -62,6 +63,7 @@ const useFetchText = (url) => {
   return state;
 };
 
+//this will do the same as the above but with json
 const useFetchJson = (url) => {
   const [state, setState] = useState({ jsonData: null, jLoading: true });
 

@@ -5,7 +5,8 @@ import React, { useEffect } from "react";
 import Counter from "./comps/counter";
 import Form from "./comps/form";
 import Fetch from "./comps/fetch";
-import UseRefEx from "./comps/useRefEx";
+import UseRefFocus from "./comps/useRefFocus";
+import UseRefNoRender from "./comps/useRefNoRender";
 
 function App() {
   // useEffect(() => {
@@ -23,7 +24,8 @@ function App() {
       <Counter />
       <Form />
       <Fetch />
-      <UseRefEx />
+      <UseRefFocus />
+      <UseRefNoRender />
     </div>
   );
 }
