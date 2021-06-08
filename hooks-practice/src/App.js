@@ -7,6 +7,7 @@ import Form from "./comps/form";
 import Fetch from "./comps/fetch";
 import UseRefFocus from "./comps/useRefFocus";
 import UseRefNoRender from "./comps/useRefNoRender";
+import Assess from "./comps/assess";
 
 function App() {
   // useEffect(() => {
@@ -21,11 +22,12 @@ function App() {
   return (
     <div className="App">
       <h1>Some simple components utilizing React Hooks</h1>
-      <Counter />
+      {/* <Counter />
       <Form />
       <Fetch />
       <UseRefFocus />
-      <UseRefNoRender />
+      <UseRefNoRender /> */}
+      <Assess />
     </div>
   );
 }
